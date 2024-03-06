@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(218, 221, 223);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+header {
+    list-style-type: none;
+    margin: 3rem;
+    margin-bottom: 10rem;
+}
+
+
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+}
+
+main, footer{
+    margin: 3rem;
+    padding: auto;
+}
+
+footer {
+    text-align: center;
+    font-style: bold;
+}
+
+#filmFusion {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    font-style: bold;
+    margin-right: 300px;
+}
+
+#slogan {
+    font-size: 60px;
+}
+
+
+
