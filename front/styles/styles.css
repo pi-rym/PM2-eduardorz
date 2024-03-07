@@ -36,6 +36,23 @@ footer {
     font-style: bold;
 }
 
+.divMovie {
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+    padding: 10px;
+    color: antiquewhite;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #filmFusion {
     font-family: "Archivo Black", sans-serif;
     font-weight: 800;
@@ -46,6 +63,14 @@ footer {
 
 #slogan {
     font-size: 60px;
+}
+
+#container {
+    margin: 5px;
+    margin-top: 30px;
+    padding: 190px;
+    background-color: rgb(207, 13, 13);
+    border-radius: 15px;
 }
 
 
