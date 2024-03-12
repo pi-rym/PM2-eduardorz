@@ -27,6 +27,17 @@ function renderFilms(movie){
     movieElement.appendChild(containerMovie);
 }
 
-tempData.forEach(renderFilms)
+/*  
+    Implementar una función que realice una solicitud de tipo GET a la siguiente URL  https://students-api.up.railway.app/movies
+    Al hacer esa solicitud, recibiremos un JSON con un array EXACTAMENTE IGUAL al que teníamos escrito a mano. 
 
-console.log(tempData);
+    Si la solicitud es exitosa, ejecutar en la callback la misma lógica que ya tienes implementada para mapear el arreglo y 
+    renderizar las tarjetas.
+
+*/ 
+
+
+$.get(`https://students-api.up.railway.app/movies`, (data) => { data.map(renderFilms) });
+
+
+
