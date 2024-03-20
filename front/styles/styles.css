@@ -46,6 +46,19 @@ footer {
     text-align: center;
 }
 
+#bioEdu {
+    margin-top: 0%;
+    padding: 150px;
+    display: flex;
+    align-items: center;
+}
+
+#bioEdu img {
+    width: 500px;
+    height: auto;
+    margin-right: 60px;
+}
+
 #container {
     display: flex;
     flex-direction: row;
