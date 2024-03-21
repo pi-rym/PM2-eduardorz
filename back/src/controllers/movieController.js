@@ -1,9 +1,9 @@
-const moviesService = require("../services/");
+const { getMovies, postMovies } = require("../services/");
 
 module.exports = {
     getAllMovies: async (req, res) => {
         try {
-            const movies = await moviesService.getMovies();
+            const movies = await getMovies();
             res.status(200).json(movies);
         } catch (error) {
             res.status(500).json({
@@ -11,5 +11,15 @@ module.exports = {
             });
         }
     },
+    postMoviesController: async (req, res) => {
+        try {
+            const movies = await postMovies(req.body);
+            res.status(201).json(movies);
+        } catch (error) {
+            res.status(400).json({
+                error: "Error interno del servidor",
+            });
+        }
+    }
 }
  
