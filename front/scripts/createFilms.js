@@ -8,27 +8,14 @@ const buttonCleaner = document.getElementById('buttonCleaner');
 
 const options = document.getElementById('options');
 
+const title = document.getElementById('movieTitle');
+const year = document.getElementById('movieYear');
+const director = document.getElementById('movieDirector');
+const duration = document.getElementById('movieDuration');
+const rate = document.getElementById('movieRate');
+const poster = document.getElementById('moviePoster');
 
-const movieObject = () => {
-    const title = document.getElementById('movieTitle').value;
-    const year = document.getElementById('movieYear').value;
-    const director = document.getElementById('movieDirector').value;
-    const duration = document.getElementById('movieDuration').value;
-    const rate = document.getElementById('movieRate').value;
-    const poster = document.getElementById('moviePoster').value;
 
-    const movie = {
-        title,
-        year,
-        director,
-        duration,
-        genre,
-        rate,
-        poster
-    }
-
-    return movie;
-}
 
 // renderizando los géneros
 function renderGenres(){
@@ -58,26 +45,14 @@ function renderGenres(){
 
 renderGenres();
 
-// obtener los datos del formulario
-function handlerSubmit(event){
-    event.preventDefault();
-    const genres = validateCheckboxes()
-    const { title, year, director, duration, rate, poster } = movieObject;
-
-    if(![title, year, director, duration, rate, poster, genres].every(Boolean)) {
-        return alert('Faltan datos de la película por llenar')
-    }
-
-}
 
 
 // validar almenos 1 género seleccionado
 function validateCheckboxes(){
-    const checkboxes = document.querySelectorAll('input [name = "genre[]"]');
-    console.log(checkboxes)
+    const checkboxes = document.querySelectorAll('input[name = "genre[]"]');
     
     const genreArray = []
-
+    
     for (const selectedGenre of checkboxes) {
         if (selectedGenre.checked){
             genreArray.push(selectedGenre.value)
@@ -87,8 +62,16 @@ function validateCheckboxes(){
     return genreArray
 }
 
-validateCheckboxes()
 
+
+const postMovies = async (movie) => {
+    try {
+        await axios.post(endPoint, movie);
+        alert("Se creó la película exitosamente");
+    } catch (error) {
+        console.log("Error al crear la película");
+    }
+}
 
 
 // LIMPIAR EL FORMULARIO
@@ -108,12 +91,28 @@ function cleanInputs(){
     
 }
 
+// obtener los datos del formulario
+function handlerSubmit(event){
+    event.preventDefault();
+    const genres = validateCheckboxes();
 
+    if(![title.value, year.value, director.value, duration.value, rate.value, poster.value, genres].every(Boolean)) {
+        return alert('Faltan datos de la película por llenar')
+    }
 
-const postMovies = async () => {
-    const data = axios.post(endPoint, movieObject);
+    const movie = {
+        title: title.value,
+        year: year.value,
+        director: director.value,
+        duration: duration.value,
+        genre: genres,
+        rate: rate.value,
+        poster: poster.value,
+    }
+
+    postMovies(movie);
+
 }
-
 
 
 buttonSubmit.addEventListener('click', handlerSubmit);
