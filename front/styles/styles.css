@@ -37,6 +37,8 @@ footer {
 }
 
 .divMovie {
+    max-height: 800px;
+    max-width: 500px;
     background-color: rgb(0, 0, 0);
     margin: 10px;
     padding: 10px;
@@ -44,6 +46,11 @@ footer {
     border-radius: 20px;
     align-items: center;
     text-align: center;
+}
+
+.divMovie img {
+    max-height: 500px;
+    max-width: 400px;
 }
 
 #bioEdu {
@@ -84,6 +91,11 @@ footer {
     padding: 190px;
     background-color: rgb(207, 13, 13);
     border-radius: 15px;
+}
+
+input[name="genre[]"] {
+    margin: 0;
+    margin-right: 3px;
 }
 
 
