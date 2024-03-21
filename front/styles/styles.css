@@ -27,8 +27,8 @@ nav ul li a {
 }
 
 main, footer{
-    margin: 2rem;
-    padding: 2rem;
+    margin: 10px;
+    padding: 10px;
 }
 
 footer {
@@ -39,11 +39,12 @@ footer {
 .divMovie img {
     max-height: 400px;
     max-width: 300px;
+    margin-bottom: 40px;
 }
 
 .divMovie {
-    height: 700px;
-    width: 400px;
+    height: 800px;
+    width: 500px;
     background-color: rgb(0, 0, 0);
     margin: 10px;
     margin-bottom: 3px;
@@ -56,6 +57,34 @@ footer {
     text-align: center;
 }
 
+.featuredMovies {
+    display: flex;
+    align-items: center;
+    margin: 100px;
+    padding: 25px;
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 30px;
+    
+}
+
+.featuredMovies img {
+    max-width: 500px;
+    max-height: 350px;
+    margin: 70px;
+}
+
+#featuredMoviesTitle {
+    font-size: 70px;
+    margin-left: 100px;
+}
+
+#featuredMoviesContainer {
+    background-color: rgb(207, 13, 13);
+    border-radius: 30px;
+    margin: 70px;
+    padding: 10px;
+}
 
 #bioEdu {
     margin-top: 0%;
@@ -71,8 +100,8 @@ footer {
 }
 
 #container {
-    margin: 100px;
-    padding: 100px;
+    margin: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -89,13 +118,14 @@ footer {
 }
 
 #slogan {
-    font-size: 60px;
+    font-size: 70px;
+    margin-left: 100px;
 }
 
 #container {
-    margin: 5px;
     margin-top: 30px;
-    padding: 190px;
+    margin: 30px;
+    padding: 10px;
     background-color: rgb(207, 13, 13);
     border-radius: 15px;
 }
